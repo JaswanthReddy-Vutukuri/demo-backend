@@ -12,6 +12,7 @@ RUN npm ci
 COPY . .
 
 # Expose port 3000 for the service
+ENV PORT=3000
 EXPOSE 3000
 
 # Start the Node.js app
