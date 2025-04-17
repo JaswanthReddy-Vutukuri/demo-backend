@@ -39,6 +39,6 @@ app.get('/favorites', async (req, res) => {
   res.json(favorites);
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 38204;
 // Listen on all interfaces so container can receive external requests
 app.listen(PORT, () => console.log(`Favorites service running on ${PORT}`));

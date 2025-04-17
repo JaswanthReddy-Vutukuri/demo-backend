@@ -38,6 +38,6 @@ app.delete('/todos/:id', async (req, res) => {
   res.status(204).send();
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 38799;
 // Listen on all interfaces so container can receive external requests
 app.listen(PORT, () => console.log(`Todo service running on ${PORT}`));
