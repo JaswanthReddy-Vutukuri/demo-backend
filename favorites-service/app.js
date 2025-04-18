@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: process.env.NODE_ENV === 'production' 
-    ? '/app/data/favorites.db'  // Mounted Docker volume path
-    : './favorites.db'           // Local dev path
+    ? '/app/data/favorites.db' // Mounted Docker volume path
+    : './favorites.db' // Local dev path
 });
 
 const Favorite = FavoriteModel(sequelize);
@@ -39,6 +39,6 @@ app.get('/favorites', async (req, res) => {
   res.json(favorites);
 });
 
-const PORT = process.env.PORT || 38204;
+const PORT = process.env.PORT || 83;
 // Listen on all interfaces so container can receive external requests
 app.listen(PORT, () => console.log(`Favorites service running on ${PORT}`));

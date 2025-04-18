@@ -3,6 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-ENV PORT=38204
-EXPOSE 38204
+ENV PORT=83
+EXPOSE 83
 CMD ["node", "app.js"]

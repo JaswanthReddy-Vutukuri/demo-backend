@@ -11,9 +11,9 @@ RUN npm ci
 # Copy all source files
 COPY . .
 
-# Expose port 38799 for the service
-ENV PORT=38799
-EXPOSE 38799
+# Expose port 82 for the service
+ENV PORT=82
+EXPOSE 82
 
 # Start the Node.js app
 CMD ["node", "app.js"]
